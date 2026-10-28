@@ -232,7 +232,10 @@ describe("coaching on dashboard start", () => {
 	it("reports batch progress in tier1Job between batches", async () => {
 		const db = seedDb();
 		try {
-			for (let i = 0; i < 60; i++) seedCoachSession(db, `s${i}`, { startedAt: ago(120 + i) });
+			// One transaction: autocommit inserts are slow enough on the Windows CI runner to time the test out.
+			db.transaction(() => {
+				for (let i = 0; i < 60; i++) seedCoachSession(db, `s${i}`, { startedAt: ago(120 + i) });
+			});
 			const controller = new AbortController();
 			// The first batch runs before the first yield.
 			const p = coachInBackground(db, controller.signal);
@@ -256,7 +259,9 @@ describe("coachInBackground with a failing session", () => {
 		});
 		try {
 			// s0 is the newest, so it is in every batch
-			for (let i = 0; i < 120; i++) seedCoachSession(db, `s${i}`, { startedAt: ago(120 + i) });
+			db.transaction(() => {
+				for (let i = 0; i < 120; i++) seedCoachSession(db, `s${i}`, { startedAt: ago(120 + i) });
+			});
 			await coachInBackground(db, new AbortController().signal);
 			expect(db.prepare("SELECT session_id FROM sessions WHERE tier1_version IS NULL").all()).toEqual([
 				{ session_id: "s0" },
