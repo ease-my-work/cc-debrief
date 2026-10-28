@@ -6,6 +6,9 @@ import { defineConfig } from "vitest/config";
 // Two projects: node (everything outside test/ui) and ui (React components under jsdom).
 export default defineConfig(({ mode }) => {
 	const perf = mode === "perf" || process.env.PERF === "1";
+	// GitHub's Windows runners stall at random (a beforeEach that only creates a temp DB has taken over 10 s), so there
+	// tests get longer timeouts and two retries. Local runs and the other CI runners keep the strict limits.
+	const slowCi = !perf && process.env.CI === "true" && process.platform === "win32";
 	return {
 		// Load .sql as text, like tsup's loader.
 		plugins: [
@@ -23,7 +26,9 @@ export default defineConfig(({ mode }) => {
 			},
 		},
 		test: {
-			testTimeout: 20000,
+			testTimeout: slowCi ? 60000 : 20000,
+			hookTimeout: slowCi ? 30000 : 10000,
+			retry: slowCi ? 2 : 0,
 			// Timing budgets are measured one file at a time, so one perf file's disk and CPU load never skews another's.
 			fileParallelism: !perf,
 			projects: [
