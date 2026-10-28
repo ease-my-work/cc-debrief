@@ -1,0 +1,254 @@
+/* Dashboard styles: Tailwind v4 with feature 12's tokens. Values mirror ui/src/lib/tokens.ts (tokens.test.ts checks). */
+@import "tailwindcss";
+
+/* Bundled fonts (no remote font service): Latin subsets of IBM Plex Sans and Mono. */
+@import "@fontsource/ibm-plex-sans/latin-400.css";
+@import "@fontsource/ibm-plex-sans/latin-500.css";
+@import "@fontsource/ibm-plex-sans/latin-600.css";
+@import "@fontsource/ibm-plex-sans/latin-ext-400.css";
+@import "@fontsource/ibm-plex-mono/latin-400.css";
+@import "@fontsource/ibm-plex-mono/latin-500.css";
+
+@theme {
+	--color-*: initial;
+	--color-background: #f4f3ee;
+	--color-panel: #ffffff;
+	--color-border: #e3e1d9;
+	--color-ink: #1c1b18;
+	--color-muted: #6b685f;
+	--color-accent: #3453c4;
+	--color-warm: #c9772e;
+	--color-good: #236b49;
+	--color-bad: #9b3a24;
+	--color-amber: #7a5410;
+	--color-amber-fill: #fbf1dc;
+	--color-good-fill: #eaf4ee;
+	--color-bad-fill: #fcebe7;
+	--color-accent-fill: #e7eeff;
+	--color-neutral-fill: #f1eee6;
+	--color-neutral-text: #5e5a4f;
+	--color-series-input: #3453c4;
+	--color-series-cache-read: #9fb3f0;
+	--color-series-output: #d9a441;
+	--color-row: #efede6;
+	--color-band: #faf9f5;
+
+	--font-sans: "IBM Plex Sans", system-ui, sans-serif;
+	--font-mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+
+/* Dark theme follows the OS (feature 12). Unlayered, so it wins over the @theme defaults. */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-background: #161512;
+		--color-panel: #1f1e1b;
+		--color-border: #34322c;
+		--color-ink: #eceae3;
+		--color-muted: #a19d92;
+		--color-accent: #7f96f0;
+		--color-warm: #e0924d;
+		--color-good: #5db38a;
+		--color-bad: #e07a62;
+		--color-amber: #e5b866;
+		--color-amber-fill: #3a2f18;
+		--color-good-fill: #17301f;
+		--color-bad-fill: #3a1f19;
+		--color-accent-fill: #1e2a4d;
+		--color-neutral-fill: #2b2924;
+		--color-neutral-text: #c9c4b8;
+		--color-series-input: #7f96f0;
+		--color-series-cache-read: #4a5c9e;
+		--color-series-output: #e5b866;
+		--color-row: #2a2925;
+		--color-band: #23221e;
+		color-scheme: dark;
+	}
+}
+
+@layer base {
+	html,
+	body {
+		background: var(--color-background);
+		color: var(--color-ink);
+		font-family: var(--font-sans);
+		-webkit-font-smoothing: antialiased;
+		margin: 0;
+	}
+	a {
+		color: var(--color-accent);
+	}
+	:focus-visible {
+		outline: 2px solid var(--color-accent);
+		outline-offset: 2px;
+	}
+}
+
+@layer components {
+	.card {
+		background: var(--color-panel);
+		border: 1px solid var(--color-border);
+		border-radius: 12px;
+	}
+	.section-h {
+		font-size: 13px;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+	}
+	.badge {
+		display: inline-block;
+		padding: 2px 8px;
+		border-radius: 999px;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 18px;
+		white-space: nowrap;
+	}
+	/* Session type badges (feature 12); docs and other use the exploration style. */
+	.b-feature {
+		background: #e7eeff;
+		color: #26409a;
+	}
+	.b-bugfix {
+		background: #fcebe7;
+		color: #9b3a24;
+	}
+	.b-refactor {
+		background: #eaf4ee;
+		color: #236b49;
+	}
+	.b-exploration {
+		background: #f1eee6;
+		color: #5e5a4f;
+	}
+	.b-ops {
+		background: #fbf1dc;
+		color: #7a5410;
+	}
+	.num {
+		font-family: var(--font-mono);
+		font-variant-numeric: tabular-nums;
+		text-align: right;
+	}
+	.mono {
+		font-family: var(--font-mono);
+	}
+	.data-table {
+		border-collapse: collapse;
+		width: 100%;
+		font-size: 13.5px;
+	}
+	.data-table th {
+		text-align: left;
+		font-weight: 600;
+		font-size: 12px;
+		color: var(--color-muted);
+		padding: 8px 12px;
+		border-bottom: 1px solid var(--color-border);
+	}
+	.data-table td {
+		padding: 11px 12px;
+		border-bottom: 1px solid var(--color-row);
+		vertical-align: middle;
+	}
+	.data-table tr:last-child td {
+		border-bottom: 0;
+	}
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.b-feature {
+		background: #1e2a4d;
+		color: #a9bcff;
+	}
+	.b-bugfix {
+		background: #3a1f19;
+		color: #f0a08c;
+	}
+	.b-refactor {
+		background: #17301f;
+		color: #8fd3ae;
+	}
+	.b-exploration {
+		background: #2b2924;
+		color: #c9c4b8;
+	}
+	.b-ops {
+		background: #3a2f18;
+		color: #e5b866;
+	}
+}
+
+/* Markdown replies, plans and memory files (Phase 7 P8, P12). */
+.markdown > :first-child {
+	margin-top: 0;
+}
+.markdown > :last-child {
+	margin-bottom: 0;
+}
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown pre,
+.markdown blockquote,
+.markdown table {
+	margin: 0.5em 0;
+}
+.markdown ul,
+.markdown ol {
+	padding-left: 1.4em;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+	margin: 0.8em 0 0.4em;
+	font-size: 14px;
+	font-weight: 600;
+}
+.markdown code {
+	font-family: var(--font-mono);
+	font-size: 12.5px;
+	background: var(--color-neutral-fill);
+	border-radius: 4px;
+	padding: 0 4px;
+}
+.markdown pre {
+	background: var(--color-band);
+	border: 1px solid var(--color-border);
+	border-radius: 8px;
+	padding: 8px 10px;
+	overflow-x: auto;
+}
+.markdown pre code {
+	background: transparent;
+	padding: 0;
+}
+.markdown blockquote {
+	border-left: 3px solid var(--color-border);
+	padding-left: 10px;
+	color: var(--color-muted);
+}
+.markdown a {
+	color: var(--color-accent);
+}
+mark[data-find] {
+	background: var(--color-amber-fill);
+	color: inherit;
+	border-radius: 2px;
+}
+mark[data-find][data-current] {
+	outline: 2px solid var(--color-amber);
+}

@@ -1,0 +1,11 @@
+{
+  "session_id": "0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786\\scratchpad",
+  "prompt_id": "2ca5a356-90fd-49ca-95ee-a96135735d07",
+  "hook_event_name": "SessionStart",
+  "source": "compact",
+  "model": "claude-opus-5-5",
+  "session_title": "README summary"
+}

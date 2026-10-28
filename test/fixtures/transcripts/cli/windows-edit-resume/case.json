@@ -1,0 +1,15 @@
+{
+  "surface": "cli",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "edit",
+    "write-permission",
+    "resume",
+    "cost-state",
+    "ai-title"
+  ],
+  "case": "windows-edit-resume",
+  "sessionId": "7d23bfeb-c5d4-42d0-a830-841cf7ef349e",
+  "scrubbedAt": "2026-09-29T17:10:23.551Z"
+}

@@ -1,0 +1,8 @@
+{
+  "agentType": "Explore",
+  "description": "List all files in repository",
+  "toolUseId": "toolu_01JuyXeUbqxkZbTYWSVoe5Wz",
+  "spawnDepth": 1,
+  "requestShape": "background",
+  "requestNonInteractive": true
+}

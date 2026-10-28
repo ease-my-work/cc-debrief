@@ -1,0 +1,6 @@
+{
+	"home": "C:\\Users\\alice",
+	"username": "alice",
+	"emails": ["alice@corp.com"],
+	"replace": { "AcmeCorp": "example-org", "billing-api": "sample-app" }
+}

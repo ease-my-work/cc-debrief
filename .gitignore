@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+
+# Build output (tsup bundles + prebuilt Vite UI -> dist/, dist/ui)
+dist/
+ui/dist/
+*.tsbuildinfo
+
+# npm pack / publish artifacts
+*.tgz
+
+# Tests (vitest, playwright)
+coverage/
+test-results/
+playwright-report/
+.vitest/
+test/.tmp/
+tmp/
+
+# Local SQLite databases (the real one lives in ~/.cc-debrief/, never in the repo)
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Phase 0: raw, unscrubbed hook payloads and transcripts. Only scrubbed copies
+# go into test/fixtures/; keep raw captures here until they are cleaned.
+test/fixtures/_raw/
+raw/
+
+# Logs
+*.log
+npm-debug.log*
+hook-errors.log*
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Caches (Vite, ESLint-style tools, turbo)
+.cache/
+.vite/
+*.cache
+
+# Claude Code local settings (personal; shared settings.json stays tracked)
+.claude/settings.local.json
+
+# Editors and OS
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini

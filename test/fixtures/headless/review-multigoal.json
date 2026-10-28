@@ -1,0 +1,10 @@
+{
+  "goals": ["fix trivy findings", "bump node", "update the README"],
+  "goal_changes": [],
+  "friction": [],
+  "what_went_well": "Each change was committed separately.",
+  "better_approach": "Run one session per goal.",
+  "suggested_first_prompt": "Fix the HIGH trivy findings in package-lock.json only.",
+  "task_pattern": "fix trivy findings",
+  "confidence": "medium"
+}

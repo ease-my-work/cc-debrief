@@ -1,0 +1,25 @@
+# Normalize all text files to LF in the repo and in the working tree,
+# regardless of each developer's core.autocrlf setting.
+* text=auto eol=lf
+
+# Binary files: never touch line endings or diff as text.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.otf binary
+*.db binary
+*.sqlite binary
+*.tgz binary
+*.zip binary
+
+# Transcript fixtures are JSONL; keep them byte-exact (LF, no conversion surprises).
+*.jsonl text eol=lf
+
+# Generated lockfile: don't show line-level diffs in reviews.
+package-lock.json -diff linguist-generated

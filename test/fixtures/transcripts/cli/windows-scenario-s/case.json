@@ -1,0 +1,24 @@
+{
+  "surface": "cli",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "read",
+    "write",
+    "powershell-fail",
+    "denial",
+    "skill",
+    "lazy-skill",
+    "plugin-skill-command",
+    "mcp-plugin",
+    "subagent",
+    "interrupt",
+    "compaction",
+    "model-command",
+    "ai-title",
+    "cost-state"
+  ],
+  "case": "windows-scenario-s",
+  "sessionId": "ff13b0ac-642e-45f9-982e-701c122e54ec",
+  "scrubbedAt": "2026-09-29T17:10:23.315Z"
+}

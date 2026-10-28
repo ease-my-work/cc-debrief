@@ -1,0 +1,12 @@
+{
+  "session_id": "7d23bfeb-c5d4-42d0-a830-841cf7ef349e",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\7d23bfeb-c5d4-42d0-a830-841cf7ef349e.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\7d23bfeb-c5d4-42d0-a830-841cf7ef349e\\scratchpad",
+  "hook_event_name": "SessionStart",
+  "source": "resume",
+  "seconds_since_last_response": 93,
+  "context_tokens": 58401,
+  "prompt_cache_likely_expired": false,
+  "estimated_cache_write_usd": 0.4672
+}

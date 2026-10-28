@@ -1,0 +1,10 @@
+{
+  "goals": ["explore the ingest code"],
+  "goal_changes": [],
+  "friction": [{ "turn": 1, "kind": "ambiguous_ask", "note": "the ask named no file or symptom" }],
+  "what_went_well": "Short session.",
+  "better_approach": "Name the symptom and the entry point.",
+  "suggested_first_prompt": "Explain how src/ingest/ingest.ts decides a file is unchanged.",
+  "task_pattern": "explore code",
+  "confidence": "low"
+}

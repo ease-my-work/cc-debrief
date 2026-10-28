@@ -1,0 +1,24 @@
+{
+  "surface": "vscode",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "read",
+    "bash",
+    "edit",
+    "powershell-fail",
+    "denial",
+    "skill",
+    "lazy-skill",
+    "mcp-connector",
+    "subagent",
+    "model-switch",
+    "interrupt",
+    "compaction",
+    "resume",
+    "ai-title"
+  ],
+  "case": "windows-scenario-s",
+  "sessionId": "b4ab355a-59ee-41c5-b145-ea5b3919b21d",
+  "scrubbedAt": "2026-09-29T17:10:24.901Z"
+}

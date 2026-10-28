@@ -1,0 +1,8 @@
+{
+  "agentType": "Explore",
+  "description": "List repo files",
+  "toolUseId": "toolu_01GNhiekJqojFYi8o8kfMCe7",
+  "spawnDepth": 1,
+  "requestShape": "foreground",
+  "requestNonInteractive": true
+}

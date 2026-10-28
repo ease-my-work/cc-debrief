@@ -1,0 +1,16 @@
+{
+  "session_id": "b4ab355a-59ee-41c5-b145-ea5b3919b21d",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\b4ab355a-59ee-41c5-b145-ea5b3919b21d.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\b4ab355a-59ee-41c5-b145-ea5b3919b21d\\scratchpad",
+  "prompt_id": "7c3d5ccd-5a57-495e-9c92-44fea7b018de",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "README says this is a scratch repo for cc-debrief spike tests.\n\nSeveral connectors (Gmail, Slack, Notion, Linear and others) aren't authorized, so they won't work until you connect them. Do that in your claude.ai connector settings, or with `/mcp` in an interactive session.",
+  "background_tasks": [],
+  "session_crons": []
+}

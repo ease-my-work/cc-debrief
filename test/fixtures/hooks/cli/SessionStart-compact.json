@@ -1,0 +1,10 @@
+{
+  "session_id": "ff13b0ac-642e-45f9-982e-701c122e54ec",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\ff13b0ac-642e-45f9-982e-701c122e54ec.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\ff13b0ac-642e-45f9-982e-701c122e54ec\\scratchpad",
+  "prompt_id": "345b0c4e-3e89-43f1-ac5e-a72601210727",
+  "hook_event_name": "SessionStart",
+  "source": "compact",
+  "model": "claude-opus-5-5"
+}

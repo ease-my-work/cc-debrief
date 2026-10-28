@@ -1,0 +1,13 @@
+{
+  "goals": ["add retry to the billing client", "rename the config loader"],
+  "goal_changes": [{ "turn": 3, "from": "add retry to the billing client", "to": "rename the config loader" }],
+  "friction": [
+    { "turn": 2, "kind": "missing_context", "note": "the retry policy lived in docs/adr-12.md, which was never mentioned" },
+    { "turn": 4, "kind": "scope_creep", "note": "the rename was asked mid-task" }
+  ],
+  "what_went_well": "Tests were run after every edit.",
+  "better_approach": "Point Claude at docs/adr-12.md in the first prompt. Do the rename in its own session after /clear.",
+  "suggested_first_prompt": "Add exponential retry to src/billing/client.ts per docs/adr-12.md; run npm test after each change.",
+  "task_pattern": "add retry",
+  "confidence": "high"
+}

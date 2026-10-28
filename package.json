@@ -1,0 +1,79 @@
+{
+	"name": "cc-debrief",
+	"version": "0.2.0",
+	"description": "Local session tracker for Claude Code: capture, dashboard, AI summaries, coaching and work recaps. Your data stays on your machine.",
+	"keywords": [
+		"claude-code",
+		"claude",
+		"session",
+		"analytics",
+		"coaching",
+		"cli",
+		"dashboard"
+	],
+	"homepage": "https://github.com/ease-my-work/cc-debrief#readme",
+	"bugs": {
+		"url": "https://github.com/ease-my-work/cc-debrief/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ease-my-work/cc-debrief.git"
+	},
+	"license": "MIT",
+	"author": "Vipul Patel",
+	"type": "module",
+	"bin": {
+		"cc-debrief": "dist/cli.js"
+	},
+	"files": [
+		"dist"
+	],
+	"engines": {
+		"node": ">=22.13"
+	},
+	"scripts": {
+		"build": "tsup && vite build --config ui/vite.config.ts",
+		"typecheck": "tsc --noEmit",
+		"test": "vitest run",
+		"test:perf": "vitest run --mode perf --project node test/perf",
+		"test:tz": "node scripts/test-tz.mjs",
+		"lint": "biome check .",
+		"fixtures:check": "node scripts/check-fixtures.mjs",
+		"test:e2e": "playwright test",
+		"prepublishOnly": "npm run build && npm test",
+		"changeset": "changeset"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.5.14",
+		"@changesets/cli": "^3.0.3",
+		"@fontsource/ibm-plex-mono": "^5.3.0",
+		"@fontsource/ibm-plex-sans": "^5.3.0",
+		"@hono/node-server": "^2.1.3",
+		"@playwright/test": "^1.63.0",
+		"@tailwindcss/vite": "^4.3.3",
+		"@testing-library/react": "^16.3.3",
+		"@testing-library/user-event": "^14.6.7",
+		"@types/node": "^22.20.4",
+		"@types/react": "^19.3.0",
+		"@types/react-dom": "^19.3.0",
+		"@vitejs/plugin-react": "^6.1.1",
+		"commander": "^15.0.0",
+		"esbuild": "^0.27.7",
+		"execa": "^10.0.1",
+		"gray-matter": "^4.0.3",
+		"hono": "^4.13.12",
+		"jsdom": "^30.1.1",
+		"jsonc-parser": "^3.3.1",
+		"react": "^19.3.0",
+		"react-dom": "^19.3.0",
+		"react-markdown": "^10.1.0",
+		"recharts": "^3.10.1",
+		"tailwindcss": "^4.3.3",
+		"tsup": "^8.5.1",
+		"typescript": "^7.0.2",
+		"vite": "^8.3.2",
+		"vitest": "^5.0.2",
+		"wouter": "^3.13.0",
+		"zod": "^4.6.5"
+	}
+}

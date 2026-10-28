@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"strict": true,
+		"target": "ES2023",
+		"lib": ["ES2023", "DOM", "DOM.Iterable"],
+		"module": "ESNext",
+		"moduleResolution": "Bundler",
+		"resolveJsonModule": true,
+		"jsx": "react-jsx",
+		"types": ["node"],
+		"paths": {
+			"@api-types": ["./src/server/types.ts"],
+			"@redact": ["./src/redact.ts"],
+			"@rule-labels": ["./src/coach/labels.ts"]
+		},
+		"noEmit": true
+	},
+	"include": ["src", "test", "ui"]
+}

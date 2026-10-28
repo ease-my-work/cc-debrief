@@ -1,0 +1,16 @@
+{
+  "session_id": "0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\0791f1db-a58e-4a3b-8ab4-0b8fd3dfd786\\scratchpad",
+  "prompt_id": "6a02cca9-d24c-437a-9dac-6ebf54a242d4",
+  "permission_mode": "auto",
+  "effort": {
+    "level": "high"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "[README.md](README.md): scratch repo for cc-debrief spike tests.\n\nSide note: several connectors (Slack, Notion, Linear, Asana, Atlassian, Figma, Canva, Datadog, PagerDuty and others) aren't authorized, so they can't be used yet. Connect claude.ai connectors in your claude.ai connector settings. For other servers, run `claude mcp` or `/mcp` in an interactive terminal.",
+  "background_tasks": [],
+  "session_crons": []
+}

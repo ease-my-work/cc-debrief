@@ -1,0 +1,72 @@
+name: release
+
+# 1. On master, changesets opens (and keeps updated) a "Version packages" pull request from the .changeset/ files.
+# 2. After that PR merges, the maintainer pushes the tag: git tag v<version> && git push origin v<version>.
+# 3. The tag runs the publish job: build, full tests, then npm publish.
+# Needs the NPM_TOKEN repository secret (a granular npm token with "bypass 2FA"); nothing here creates tags or secrets.
+# Publishes with --provenance, which needs the public repository and the id-token permission below.
+on:
+  push:
+    branches: [master]
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  version-pr:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.x
+          cache: npm
+      - run: npm ci
+      - uses: changesets/action@v1
+        with:
+          version: npx changeset version
+          title: Version packages
+          commit: "chore: version packages"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  publish:
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22.x
+          cache: npm
+          registry-url: https://registry.npmjs.org
+      - name: Tag matches package.json
+        run: |
+          version="$(node -p "require('./package.json').version")"
+          if [ "v${version}" != "${GITHUB_REF_NAME}" ]; then
+            echo "tag ${GITHUB_REF_NAME} does not match package.json version ${version}" >&2
+            exit 1
+          fi
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run typecheck
+      - run: npm run build
+      - run: npm test
+        env:
+          REQUIRE_DIST: "1"
+      - run: node scripts/pack-smoke.mjs
+      - run: npm publish --access public --provenance --ignore-scripts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

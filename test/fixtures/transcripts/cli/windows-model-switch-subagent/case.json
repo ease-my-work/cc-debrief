@@ -1,0 +1,13 @@
+{
+  "surface": "cli",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "model-switch",
+    "subagent",
+    "cost-state"
+  ],
+  "case": "windows-model-switch-subagent",
+  "sessionId": "f26b9800-415f-48c6-ab3a-6c90ed735737",
+  "scrubbedAt": "2026-09-29T17:10:23.877Z"
+}

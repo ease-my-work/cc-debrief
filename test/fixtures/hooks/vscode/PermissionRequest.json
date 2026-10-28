@@ -1,0 +1,26 @@
+{
+  "session_id": "b4ab355a-59ee-41c5-b145-ea5b3919b21d",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\b4ab355a-59ee-41c5-b145-ea5b3919b21d.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\b4ab355a-59ee-41c5-b145-ea5b3919b21d\\scratchpad",
+  "prompt_id": "9f495a95-0e35-412d-9029-3c6c30fb51a6",
+  "permission_mode": "default",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "PermissionRequest",
+  "tool_name": "Edit",
+  "tool_input": {
+    "file_path": "C:\\Users\\user\\ccd-scratch\\hello.txt",
+    "old_string": "hi again",
+    "new_string": "hello",
+    "replace_all": false
+  },
+  "permission_suggestions": [
+    {
+      "type": "setMode",
+      "mode": "acceptEdits",
+      "destination": "session"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "session_id": "0d622b75-fc7d-4990-9c1a-8e63852e49f1",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\0d622b75-fc7d-4990-9c1a-8e63852e49f1.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "hook_event_name": "SessionStart",
+  "source": "startup",
+  "model": "claude-opus-5[1m]"
+}

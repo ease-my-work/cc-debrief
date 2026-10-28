@@ -1,0 +1,6 @@
+{
+  "agentType": "Explore",
+  "description": "List repo files",
+  "toolUseId": "toolu_agent",
+  "spawnDepth": 1
+}

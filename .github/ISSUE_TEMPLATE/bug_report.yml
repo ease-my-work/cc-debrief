@@ -1,0 +1,57 @@
+name: Bug report
+description: Something in cc-debrief does not work as described.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not paste transcripts, prompts, file contents, tokens or keys.** Replace your user name and repo names in
+        paths and logs. Security problems go through private reporting (Security tab → Report a vulnerability).
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. npx cc-debrief init
+        2. Run a Claude Code session in ...
+        3. Open the dashboard, go to ...
+  - type: input
+    id: version
+    attributes:
+      label: cc-debrief version
+      description: "`npx cc-debrief --version`"
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: OS
+      options: [Windows, macOS, Linux, WSL]
+    validations:
+      required: true
+  - type: dropdown
+    id: client
+    attributes:
+      label: Claude Code client
+      multiple: true
+      options: [CLI, VS Code extension, Desktop app]
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Node.js and Claude Code versions
+      placeholder: "node 22.13.0, claude 2.1.x"
+  - type: textarea
+    id: doctor
+    attributes:
+      label: Output of `npx cc-debrief doctor`
+      description: Remove user names and repo names from paths first.
+      render: text

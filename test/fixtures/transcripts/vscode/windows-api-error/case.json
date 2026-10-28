@@ -1,0 +1,13 @@
+{
+  "surface": "vscode",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "api-error",
+    "synthetic-model",
+    "cost-state"
+  ],
+  "case": "windows-api-error",
+  "sessionId": "7e1f5c08-5611-4658-ba77-5cd76a73e9ce",
+  "scrubbedAt": "2026-09-29T17:10:25.053Z"
+}

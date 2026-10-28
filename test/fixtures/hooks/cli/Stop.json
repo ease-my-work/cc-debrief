@@ -1,0 +1,15 @@
+{
+  "session_id": "ff13b0ac-642e-45f9-982e-701c122e54ec",
+  "transcript_path": "C:\\Users\\user\\.claude\\projects\\C--Users-user-ccd-scratch\\ff13b0ac-642e-45f9-982e-701c122e54ec.jsonl",
+  "cwd": "C:\\Users\\user\\ccd-scratch",
+  "scratchpad_dir": "C:\\Users\\user\\AppData\\Local\\Temp\\claude\\C--Users-user-ccd-scratch\\ff13b0ac-642e-45f9-982e-701c122e54ec\\scratchpad",
+  "permission_mode": "default",
+  "effort": {
+    "level": "medium"
+  },
+  "hook_event_name": "Stop",
+  "stop_hook_active": false,
+  "last_assistant_message": "Scratch repo for cc-debrief spike tests; README has only a title and that one line.",
+  "background_tasks": [],
+  "session_crons": []
+}

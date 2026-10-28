@@ -1,0 +1,91 @@
+{
+	"sessionId": "5b1c0d2e-3f4a-4b5c-8d6e-7f8091a2b3c4",
+	"files": [
+		{ "relPath": "5b1c0d2e-3f4a-4b5c-8d6e-7f8091a2b3c4.jsonl", "agentId": null, "lines": 40 },
+		{
+			"relPath": "5b1c0d2e-3f4a-4b5c-8d6e-7f8091a2b3c4/subagents/agent-a1b2c3d4e5f6a7b8c.jsonl",
+			"agentId": "a1b2c3d4e5f6a7b8c",
+			"lines": 4
+		}
+	],
+	"session": {
+		"startedAt": "2026-09-01T10:00:00.000Z",
+		"endedAt": "2026-09-01T10:04:30.000Z",
+		"cwd": "/home/user/basic",
+		"branch": "main",
+		"permissionMode": "default",
+		"ccVersion": "2.1.284",
+		"entrypoint": "cli",
+		"surface": "cli",
+		"capture": "backfill",
+		"models": ["claude-opus-5-5"],
+		"title": "Typo fix and tests",
+		"agentName": "basic-agent",
+		"reportedCostUsd": 0.1234
+	},
+	"turns": [
+		{
+			"seq": 1,
+			"promptId": "p1",
+			"userText": "Read README.md and fix the typo in src/hello.ts.",
+			"startedAt": "2026-09-01T10:00:01.000Z"
+		},
+		{
+			"seq": 2,
+			"promptId": "p2",
+			"userText": "Run the tests with Bash and PowerShell, then write notes.md.",
+			"startedAt": "2026-09-01T10:01:00.000Z"
+		},
+		{
+			"seq": 3,
+			"promptId": "p4",
+			"userText": "Use the hello skill, search the code, check the Vite docs and explore the repo.",
+			"startedAt": "2026-09-01T10:03:00.000Z"
+		}
+	],
+	"usage": [
+		{ "messageId": "msg_A", "requestId": "req_A", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 10, "outputTokens": 20, "cacheCreationTokens": 100, "cacheReadTokens": 1000, "turnSeq": 1 },
+		{ "messageId": "msg_B", "requestId": "req_B", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 3, "outputTokens": 30, "cacheCreationTokens": 50, "cacheReadTokens": 1100, "turnSeq": 1 },
+		{ "messageId": "msg_C", "requestId": "req_C", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 2, "outputTokens": 8, "cacheCreationTokens": 10, "cacheReadTokens": 1200, "turnSeq": 1 },
+		{ "messageId": "msg_D", "requestId": "req_D", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 4, "outputTokens": 12, "cacheCreationTokens": 20, "cacheReadTokens": 1300, "turnSeq": 2 },
+		{ "messageId": "msg_E", "requestId": "req_E", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 4, "outputTokens": 12, "cacheCreationTokens": 20, "cacheReadTokens": 1400, "turnSeq": 2 },
+		{ "messageId": "msg_F", "requestId": "req_F", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 4, "outputTokens": 40, "cacheCreationTokens": 20, "cacheReadTokens": 1500, "turnSeq": 2 },
+		{ "messageId": "msg_G", "requestId": "req_G", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 5, "outputTokens": 10, "cacheCreationTokens": 30, "cacheReadTokens": 1600, "turnSeq": 3 },
+		{ "messageId": "msg_H", "requestId": "req_H", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 5, "outputTokens": 10, "cacheCreationTokens": 30, "cacheReadTokens": 1700, "turnSeq": 3 },
+		{ "messageId": "msg_I", "requestId": "req_I", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 5, "outputTokens": 10, "cacheCreationTokens": 30, "cacheReadTokens": 1800, "turnSeq": 3 },
+		{ "messageId": "msg_J", "requestId": "req_J", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 5, "outputTokens": 10, "cacheCreationTokens": 30, "cacheReadTokens": 1900, "turnSeq": 3 },
+		{ "messageId": "msg_K", "requestId": "req_K", "agentId": null, "model": "claude-opus-5-5", "inputTokens": 5, "outputTokens": 15, "cacheCreationTokens": 30, "cacheReadTokens": 2000, "turnSeq": 3 },
+		{ "messageId": "msg_S", "requestId": "req_S", "agentId": "a1b2c3d4e5f6a7b8c", "model": "claude-haiku-4-5-20251001", "inputTokens": 2, "outputTokens": 25, "cacheCreationTokens": 500, "cacheReadTokens": 3000, "turnSeq": 3 },
+		{ "messageId": "msg_T", "requestId": "req_T", "agentId": "a1b2c3d4e5f6a7b8c", "model": "claude-haiku-4-5-20251001", "inputTokens": 2, "outputTokens": 10, "cacheCreationTokens": 100, "cacheReadTokens": 3500, "turnSeq": 3 }
+	],
+	"costState": { "totalCostUsd": 0.1234 },
+	"subagents": [
+		{
+			"agentId": "a1b2c3d4e5f6a7b8c",
+			"agentType": "Explore",
+			"description": "List repo files",
+			"toolUseId": "toolu_agent",
+			"startedAt": "2026-09-01T10:03:10.000Z",
+			"endedAt": "2026-09-01T10:03:15.000Z"
+		}
+	],
+	"compactions": [{ "ts": "2026-09-01T10:04:00.000Z", "trigger": "manual", "preTokens": 40000, "postTokens": 6000 }],
+	"instructions": [{ "filePath": "/home/user/basic/CLAUDE.md", "kind": "Project", "ts": "2026-09-01T10:00:00.100Z" }],
+	"skillCommands": ["caveman:caveman-help"],
+	"toolCalls": [
+		{ "toolUseId": "toolu_read", "toolName": "Read", "agentId": null, "turnSeq": 1, "ok": 1, "denied": null, "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:00:03.000Z", "endedAt": "2026-09-01T10:00:04.000Z" },
+		{ "toolUseId": "toolu_edit", "toolName": "Edit", "agentId": null, "turnSeq": 1, "ok": 1, "denied": null, "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:00:05.000Z", "endedAt": "2026-09-01T10:00:06.000Z" },
+		{ "toolUseId": "toolu_bash", "toolName": "Bash", "agentId": null, "turnSeq": 2, "ok": 0, "denied": null, "exitCode": 1, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:01:01.000Z", "endedAt": "2026-09-01T10:01:03.000Z" },
+		{ "toolUseId": "toolu_ps", "toolName": "PowerShell", "agentId": null, "turnSeq": 2, "ok": 0, "denied": null, "exitCode": 2, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:01:04.000Z", "endedAt": "2026-09-01T10:01:06.000Z" },
+		{ "toolUseId": "toolu_write", "toolName": "Write", "agentId": null, "turnSeq": 2, "ok": 0, "denied": "user-rejected", "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:01:07.000Z", "endedAt": "2026-09-01T10:01:10.000Z" },
+		{ "toolUseId": "toolu_skill", "toolName": "Skill", "agentId": null, "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": "hello", "startedAt": "2026-09-01T10:03:01.000Z", "endedAt": "2026-09-01T10:03:02.000Z" },
+		{ "toolUseId": "toolu_gh", "toolName": "mcp__github__search_code", "agentId": null, "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": "github", "mcpSource": null, "mcpTool": "search_code", "skillName": null, "startedAt": "2026-09-01T10:03:03.000Z", "endedAt": "2026-09-01T10:03:04.000Z" },
+		{ "toolUseId": "toolu_c7p", "toolName": "mcp__plugin_context7_context7__query-docs", "agentId": null, "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": "context7", "mcpSource": "plugin:context7", "mcpTool": "query-docs", "skillName": null, "startedAt": "2026-09-01T10:03:05.000Z", "endedAt": "2026-09-01T10:03:06.000Z" },
+		{ "toolUseId": "toolu_c7c", "toolName": "mcp__claude_ai_Context7__query-docs", "agentId": null, "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": "Context7", "mcpSource": "claude.ai", "mcpTool": "query-docs", "skillName": null, "startedAt": "2026-09-01T10:03:07.000Z", "endedAt": "2026-09-01T10:03:08.000Z" },
+		{ "toolUseId": "toolu_agent", "toolName": "Agent", "agentId": null, "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:03:09.000Z", "endedAt": "2026-09-01T10:03:20.000Z" },
+		{ "toolUseId": "toolu_sub_ls", "toolName": "Bash", "agentId": "a1b2c3d4e5f6a7b8c", "turnSeq": 3, "ok": 1, "denied": null, "exitCode": null, "mcpServer": null, "mcpSource": null, "mcpTool": null, "skillName": null, "startedAt": "2026-09-01T10:03:12.000Z", "endedAt": "2026-09-01T10:03:13.000Z" }
+	],
+	"fileChanges": [
+		{ "toolUseId": "toolu_edit", "path": "/home/user/basic/src/hello.ts", "repoId": null, "linesAdded": 3, "linesRemoved": 1, "language": "ts", "approx": 0 }
+	]
+}

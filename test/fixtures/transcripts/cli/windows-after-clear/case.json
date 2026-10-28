@@ -1,0 +1,11 @@
+{
+  "surface": "cli",
+  "os": "windows",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "clear"
+  ],
+  "case": "windows-after-clear",
+  "sessionId": "f0286d25-49c9-4850-9b58-7e93f7a51eb5",
+  "scrubbedAt": "2026-09-29T17:10:24.086Z"
+}

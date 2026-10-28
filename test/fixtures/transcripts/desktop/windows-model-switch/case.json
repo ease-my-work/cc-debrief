@@ -1,0 +1,12 @@
+{
+  "surface": "desktop",
+  "os": "windows",
+  "ccVersion": "2.1.281",
+  "covers": [
+    "model-switch",
+    "custom-title"
+  ],
+  "case": "windows-model-switch",
+  "sessionId": "900d6a3c-df19-4128-8615-fcb035cdbcc0",
+  "scrubbedAt": "2026-09-29T17:10:24.583Z"
+}

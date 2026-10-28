@@ -1,0 +1,23 @@
+{
+  "surface": "cli",
+  "os": "linux",
+  "ccVersion": "2.1.284",
+  "covers": [
+    "read-via-bash",
+    "write",
+    "edit",
+    "bash-fail",
+    "denial",
+    "skill",
+    "lazy-skill",
+    "mcp-connector",
+    "subagent",
+    "model-switch",
+    "compaction",
+    "ai-title",
+    "artifact-tool-error"
+  ],
+  "case": "linux-scenario-s",
+  "sessionId": "e87d9690-0f42-4213-964b-e0c3ee1ee643",
+  "scrubbedAt": "2026-09-29T17:12:36.142Z"
+}
