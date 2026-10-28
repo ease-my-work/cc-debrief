@@ -1,13 +1,13 @@
 name: release
 
-# 1. On master, changesets opens (and keeps updated) a "Version packages" pull request from the .changeset/ files.
+# 1. On main, changesets opens (and keeps updated) a "Version packages" pull request from the .changeset/ files.
 # 2. After that PR merges, the maintainer pushes the tag: git tag v<version> && git push origin v<version>.
 # 3. The tag runs the publish job: build, full tests, then npm publish.
 # Needs the NPM_TOKEN repository secret (a granular npm token with "bypass 2FA"); nothing here creates tags or secrets.
 # Publishes with --provenance, which needs the public repository and the id-token permission below.
 on:
   push:
-    branches: [master]
+    branches: [main]
     tags: ["v*"]
 
 permissions:
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   version-pr:
-    if: github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     permissions:
       contents: write
