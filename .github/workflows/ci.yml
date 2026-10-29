@@ -29,7 +29,9 @@ jobs:
       - run: npm run build
       # On the oldest supported Node only the node project runs: jsdom and undici, which only the UI tests use, need a
       # newer Node. The published package bundles neither, and the UI tests still run on 22.x.
+      # bash: PowerShell drops the "--", and npm then takes --project as its own option.
       - run: npm test -- ${{ matrix.node == '22.13.0' && '--project node' || '' }}
+        shell: bash
         env:
           REQUIRE_DIST: "1"
       - run: npm run test:tz
