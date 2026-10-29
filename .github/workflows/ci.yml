@@ -27,7 +27,9 @@ jobs:
       - run: npm run lint
       - run: npm run typecheck
       - run: npm run build
-      - run: npm test
+      # On the oldest supported Node only the node project runs: jsdom and undici, which only the UI tests use, need a
+      # newer Node. The published package bundles neither, and the UI tests still run on 22.x.
+      - run: npm test -- ${{ matrix.node == '22.13.0' && '--project node' || '' }}
         env:
           REQUIRE_DIST: "1"
       - run: npm run test:tz
